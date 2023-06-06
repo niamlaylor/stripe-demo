@@ -1,5 +1,5 @@
 import './App.css';
-import logo from './resources/logo512.png';
+import logo from './resources/logo192.png';
 import StripeContainer from './components/StripeContainer';
 import { useState } from 'react';
 
