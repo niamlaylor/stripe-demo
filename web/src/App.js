@@ -7,7 +7,7 @@ function App() {
   const [showItem, setShowItem] = useState(false);
   return (
     <div className="App">
-      <h1>Welcome</h1>
+      <h1>Welcome, buy something from me!</h1>
       {showItem ? <StripeContainer/> 
       : 
       <>
