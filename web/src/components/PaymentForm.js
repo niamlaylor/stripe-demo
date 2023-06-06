@@ -14,7 +14,26 @@ export default function PaymentForm() {
       type: 'card',
       card: elements.getElement(CardElement),
     });
-  };
+
+    if (!error) {
+      try {
+        const {id} = paymentMethod
+        const response = await axios.post('http://localhost:3000/', {
+          amount: 1000,
+          id: '1'
+        })
+        if (response.data.success) {
+          console.log("Success");
+          setSuccess(true);
+        }
+
+      } catch (error) {
+        console.log('There was an error: ', error);
+      } 
+    } else {
+      console.log(error.message);
+    };
+  }
 
   return (
     <div>
